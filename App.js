@@ -24,18 +24,24 @@ export default function App() {
           <Image
             source={require("./assets/imdb-logo.png")}
             style={styles.logo}
+            resizeMode="contain"
           />
         </View>
         <View style={[styles.filmContainer]}>
           <View style={[styles.film]}>
             <Text style={[styles.filmTitle]}>Interstellar</Text>
-            <Text style={[styles.filmDetails]}>
-              2014 PG-13 2h 49min Adventure,Drama,Sci-Fi
-            </Text>
+            <View style={{ flexDirection: "row" }}>
+              <Text style={[styles.filmDetails]}>2014</Text>
+              <Text style={[styles.filmDetails]}>PG-13</Text>
+              <Text style={[styles.filmDetails]}>2h 49min</Text>
+              <Text style={[styles.filmDetails]}>Adventure,Drama,Sci-Fi</Text>
+            </View>
+
             <View style={[styles.filmDescription]}>
               <Image
                 source={require("./assets/img-film.jpg")}
                 style={styles.filmImg}
+                // resizeMode="contain"
               />
               <View style={[styles.filmDescriptionElements]}>
                 <Text style={[styles.filmDescriptionText]}>
@@ -232,12 +238,14 @@ const styles = StyleSheet.create({
   filmTitle: {
     color: "white",
     fontSize: 30,
+    fontWeight: "100", //work only on ios
     marginBottom: 5,
   },
   filmDetails: {
     color: "#999999",
     fontSize: 14,
     marginBottom: 25,
+    marginHorizontal: 5,
   },
 
   filmDescription: {
@@ -251,11 +259,11 @@ const styles = StyleSheet.create({
     height: 150,
     width: 100,
     marginRight: 20,
-    // resizeMode: "contain",
   },
 
   filmDescriptionElements: {
     marginRight: 20,
+    // flex: 1,
     flexShrink: 1,
   },
 
