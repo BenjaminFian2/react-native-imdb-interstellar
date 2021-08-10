@@ -120,7 +120,7 @@ export default function App() {
             </View>
             <ScrollView
               horizontal={true}
-              showsHorizontalScrollIndicator={false}
+              showsHorizontalScrollIndicator={false} // to hide the scroll bar
             >
               <View style={{ marginRight: 10 }}>
                 <Image
