@@ -210,7 +210,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "black",
-    marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0,
+    marginTop: Platform.OS === "android" ? Constants.statusBarHeight : 0, // don't forget to put a value for ios. If not ios generate an error!
   },
   logoContainer: {
     backgroundColor: "#393939",
