@@ -118,7 +118,10 @@ export default function App() {
                 <Text style={[styles.titleCastTextAside]}>SEE ALL</Text>
               </TouchableOpacity>
             </View>
-            <ScrollView horizontal={true}>
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+            >
               <View style={{ marginRight: 10 }}>
                 <Image
                   source={require("./assets/matthew-mc-conaughey.jpg")}
